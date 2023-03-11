@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Arithmetic Calculator</title>
+    <style>
+        .inputbox {
+            border-radius: 10px;
+            width: 70%;
+            height: 29px;
+            background-color: rgb(247, 242, 242);
+            font-weight: bold;
+            border: 3px solid black;
+        }
+
+        .calculatorDummy {
+            border: 2px solid red;
+            margin: auto;
+            width: 25vw;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            background-color: grey;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            font-size: 22px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .h1-primary {
+            text-align: center;
+            font-size: 50px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 5px 16px;
+            border-radius: 13px;
+            font-size: 22px;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        select {
+            height: 28px;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+
+        @media (max-width:500px) {
+
+            .calculatorDummy {
+                width: 80vw;
+            }
+        }
+
+        @media (min-width:500px) and (max-width:1000px) {
+            .calculatorDummy {
+                width: 300px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="h1-primary">Calculator</h1>
+    <div class="calculatorDummy">
+
+
+        <label for="num1">Enter number 1:</label>
+        <input type="number" id="num1" name="num1" class="inputbox" placeholder="Enter the Number:" /><br /><br />
+
+        <label for="num2">Enter number 2:</label>
+        <input type="number" id="num2" name="num2" class="inputbox" placeholder="Enter the Number:" /><br /><br />
+
+        <label for="operator">Select an operator:</label>
+        <select id="operator" name="operator" class="inputbox">
+            <option value="">--Select--</option>
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (*)</option>
+
+            <option value="/">Division (/)</option>
+        </select><br /><br />
+
+        <button onclick="performOperations()">Calculate</button>
+
+        <p id="result">Result is :</p>
+
+        <script src="contest-1-march.js"></script>
+    </div>
+</body>
+
+</html>
